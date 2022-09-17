@@ -1,0 +1,355 @@
+/* :root {
+    --main-bg-color: #422261;
+    --face: #422261;
+  }
+  * {
+    border: 5px solid red;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  body {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--main-bg-color);
+  } */
+  /* *,
+  *:before,
+  *:after {
+      padding: 0;
+      margin: 0;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+  }
+  body {
+      background-color: #fdbf00;
+  } */
+   .wrapper {
+      width: 320px;
+      height: 470px;
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+  }
+  
+  .container {
+      background-color: #ffffff;
+      position: relative;
+      height: 360px;
+      border-radius: 8px;
+      -webkit-box-shadow: 0 30px 40px rgb(68, 52, 2, 0.3);
+      box-shadow: 0 30px 40px rgb(68, 52, 2, 0.3);
+  } 
+   a {
+      display: block;
+      width: 100%;
+      background-color: #ffffff;
+      position: absolute;
+      bottom: 0;
+      padding: 12px 0;
+      text-align: center;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      text-decoration: none;
+      color: #000000;
+      border-radius: 5px;
+      -webkit-box-shadow: 0 30px 40px rgb(68, 52, 2, 0.3);
+      box-shadow: 0 30px 40px rgb(68, 52, 2, 0.3);
+  } 
+
+:root {
+  --cake-color: #fad29d;
+  --icing-color: #ae77fa;
+  --icing-highlight: #dbc7f7;
+}
+
+body{
+  background: #C7F8B5;
+}
+
+.box-canvas{
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 8%;
+  margin-bottom: 8%;
+  width: 150px;
+  height:170px;
+} 
+
+.plate {
+  position: absolute;
+  top: 230px;
+  /* bottom: 15px; */
+  width: 190px;
+  height: 90px;
+  background: #BFBFBF;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cake-side {
+  position: absolute;
+  top: 105px;
+  width: 150px;
+  height: 90px;
+  background: var(--cake-color);
+  border-radius: 0 0 50% 50%;
+  overflow: hidden;
+}
+
+.cake-side::before {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 90px;
+  background: #fff8ef;
+  border-radius: 0 0 50% 50%;
+  top: -20px;
+}
+
+.cake-side::after {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 90px;
+  background: var(--cake-color);
+  border-radius: 0 0 50% 50%;
+  top: -30px;
+}
+
+.cake-top {
+  position: absolute;
+  top: 70px;
+  width: 150px;
+  height: 75px;
+  background: var(--icing-color);
+  border-radius: 50%;
+  border-bottom: 4px solid var(--icing-highlight);
+}
+
+.drips {
+  position: absolute;
+  display: flex;
+  width: 150px;
+  height: 70px;
+  top: 105px;
+}
+
+.drip:nth-child(1) {
+  height: 50px;
+  width: 20px;
+}
+
+.drip:nth-child(2) {
+  height: 50px;
+  width: 15px;
+}
+
+.drip:nth-child(3) {
+  height: 50px;
+  width: 20px;
+}
+
+.drip:nth-child(4) {
+  height: 60px;
+  width: 25px;
+}
+
+.drip:nth-child(5) {
+  height: 65px;
+  width: 25px;
+}
+
+.drip:nth-child(6) {
+  height: 50px;
+  width: 20px;
+}
+
+.drip:nth-child(7) {
+  height: 60px;
+  width: 15px;
+}
+
+.drip:nth-child(8) {
+  height: 35px;
+  width: 10px;
+}
+
+.drip {
+  background: var(--icing-color);
+  border-radius: 0 0 50% 50% / 0 0 20% 20%;
+}
+
+
+  .bottom-layer,
+  .top-layer,
+  .middle-layer {
+      height: 50px;
+      width: 160px;
+      position: relative;
+      margin: auto;
+      background-repeat: repeat;
+      background-size: 100% 100%, 60px 100px;
+      background-position: 28px 0;
+      /* z-index: 1; */
+      /* background-image: -o-linear-gradient(
+              transparent 50px,
+              #fedbab 50px,
+              #fedbab 60px,
+              transparent 60px
+          ),
+          -o-radial-gradient(30px 5px, circle, #994c10 30px, #fcbf29 31px);
+      background-image: linear-gradient(
+              transparent 50px,
+              #fedbab 50px,
+              #fedbab 60px,
+              transparent 60px
+          ),
+          radial-gradient(circle at 30px 5px, #994c10 30px, #fcbf29 31px);
+      border-radius: 10px 10px 0 0; */
+
+  }
+  .middle-layer {
+     
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      transform: scale(0);
+      top: 172px;
+      -webkit-animation: rise-1 3s forwards;
+      
+      animation: rise-1 3s forwards;
+      z-index: 1;
+
+
+  }
+  @-webkit-keyframes rise-1 {
+      100% {
+          top: 7px;
+          -webkit-transform: scale(0.82) ;
+          -ms-transform: scale(0.82);
+          transform: scale(0.82) ;
+      }
+  }
+  @keyframes rise-1 {
+      100% {
+          top: 7px;
+          -webkit-transform: scale(0.82) ;
+          -ms-transform: scale(0.82);
+          transform: scale(0.82) ;
+      }
+  }
+  .top-layer {
+      z-index: 2;
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      transform: scale(0);
+      top: 144px;
+      -webkit-animation: rise-2 2s 2s forwards;
+      animation: rise-2 2s 2s forwards;
+  }
+  @-webkit-keyframes rise-2 {
+      100% {
+        top: 26px;
+        -webkit-transform: scale(0.68) ;
+        -ms-transform: scale(0.68);
+        transform: scale(0.68) ;
+    }
+  }
+  @keyframes rise-2 {
+    100% {
+        top: 26px;
+        -webkit-transform: scale(0.68) ;
+        -ms-transform: scale(0.68);
+        transform: scale(0.68) ;
+    }
+
+  }
+   
+  .candle {
+      z-index: 4;
+      /* background: -o-repeating-linear-gradient(
+          45deg,
+          #ae77fa 0,
+          #ae77fa 5px,
+          #ffa89e 5px,
+          #ffa89e 10px
+      ); */
+      background: repeating-linear-gradient(
+          45deg,
+          #7013F2 0,
+          #7013F2 5px,
+          #dbc7f7 5px,
+          #dbc7f7 10px
+      );
+      height: 45px;
+      width: 15px;
+      position: absolute;
+      margin: auto;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+
+      -webkit-transform: scale(0) ;
+      -ms-transform: scale(0) ;
+      transform: scale(0) ;
+
+      -webkit-animation: rise-3 1s 4s forwards;
+      animation: rise-3 1s 4s forwards;
+      border-radius: 20% 20% 20% 20%;
+  }
+  @-webkit-keyframes rise-3 {
+      100% {
+          bottom: 202px;
+          -webkit-transform: scale(1) ;
+          -ms-transform: scale(1) ;
+          transform: scale(1) ;
+
+      }
+  }
+  @keyframes rise-3 {
+      100% {
+          bottom: 65px;
+          -webkit-transform: scale(1) ;
+          -ms-transform: scale(1) ;
+          transform: scale(1) ;
+
+      }
+  }
+  .candle:after {
+      content: "";
+      position: absolute;
+      height: 16px;
+      width: 16px;
+      background-color: #ffb62d;
+      border-radius: 0 50% 50% 50%;
+      -webkit-transform: scale(0) rotate(45deg);
+      -ms-transform: scale(0) rotate(45deg);
+      transform: scale(0) rotate(45deg);
+      bottom: 50px;
+      left: -0.5px;
+      -webkit-animation: flame 1.5s 5s forwards;
+      animation: flame 1.5s 5s forwards;
+  }
+  @-webkit-keyframes flame {
+      100% {
+          -webkit-transform: scale(1) rotate(45deg);
+          transform: scale(1) rotate(45deg);
+      }
+  }
+  @keyframes flame {
+      100% {
+          -webkit-transform: scale(1) rotate(45deg);
+          transform: scale(1) rotate(45deg);
+      }
+  }
+  
+   
